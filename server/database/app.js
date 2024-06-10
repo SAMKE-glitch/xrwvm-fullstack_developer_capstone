@@ -87,7 +87,7 @@ app.get('/fetchDealer/:id', async (req, res) => {
 //Write your code here
 try {
     // Fetch dealership by id
-    const dealership = await Dealerships.findById(req.params.id);
+    const dealership = await Dealerships.findOne({ id: req.params.id });
     
     // Check if dealership exists
     if (!dealership) {
