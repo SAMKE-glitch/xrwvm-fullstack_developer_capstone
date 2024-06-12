@@ -1,28 +1,18 @@
-#from django.contrib import admin
-#from .models import related models
 from django.contrib import admin
 from .models import CarMake, CarModel
 
-
 # Register your models here.
 
-# CarModelInline class
-
-# CarModelAdmin class
-
-# CarMakeAdmin class with CarModelInline
-
-# Register models here
-# Optional: CarModelInline class to include in CarMakeAdmin
+# Define CarModelInline class to include in CarMakeAdmin
 class CarModelInline(admin.StackedInline):
     model = CarModel
-    extra = 1
+    extra = 5  # Display 5 empty forms for adding CarModel instances under each CarMake
 
-# Optional: CarModelAdmin class to customize the CarModel display
+# Define CarModelAdmin class to customize the CarModel display
 class CarModelAdmin(admin.ModelAdmin):
-    list_display = ('name', 'car_make', 'type', 'year', 'mileage')
+    list_display = ('name', 'car_make', 'type', 'year', 'mileage')  # Include 'mileage' field in list_display
 
-# Optional: CarMakeAdmin class to include CarModelInline
+# Define CarMakeAdmin class to include CarModelInline
 class CarMakeAdmin(admin.ModelAdmin):
     inlines = [CarModelInline]
     list_display = ('name', 'description')
