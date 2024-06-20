@@ -69,14 +69,15 @@ def registration(request):
         logger.debug(f"{username} is a new user")
 
     if not username_exist:
-        user = User.objects.create_user(username=username, 
+        user = User.objects.create_user(username=username,
                                         first_name=first_name,
                                         last_name=last_name,
                                         password=password, email=email)
         login(request, user)
         return JsonResponse({"userName": username, "status": "Authenticated"})
     else:
-        return JsonResponse({"userName": username, "error": "Already Registered"})
+        return JsonResponse({"userName": username,
+                            "error": "Already Registered"})
 
 
 # Update the `get_dealerships` view to render list
