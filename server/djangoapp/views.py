@@ -1,10 +1,10 @@
 # Uncomment the required imports before adding the code
-#from django.shortcuts import render, get_object_or_404, redirect
+# from django.shortcuts import render, get_object_or_404, redirect
 from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-#from django.contrib import messages
-#from datetime import datetime
+# from django.contrib import messages
+# from datetime import datetime
 
 import logging
 import json
@@ -60,7 +60,7 @@ def registration(request):
     last_name = data['lastName']
     email = data['email']
     username_exist = False
-    #email_exist = False
+    # email_exist = False
     try:
         # Check if user already exists
         User.objects.get(username=username)
@@ -115,12 +115,12 @@ def get_dealer_details(request, dealer_id):
 # Create an `add_review` view to submit a review
 def add_review(request):
     if not request.user.is_anonymous:
-        data = json.loads(request.body)
+        # data = json.loads(request.body)
         try:
-            #response = post_review(data)
+            # response = post_review(data)
             return JsonResponse({"status": 200})
         except Exception as e:
-            return JsonResponse({"status": 401, 
-                    "message": f"Error in posting review: {str(e)}"})
+            return JsonResponse({"status": 401,
+                "message": f"Error in posting review: {str(e)}"})
     else:
         return JsonResponse({"status": 403, "message": "Unauthorized"})
