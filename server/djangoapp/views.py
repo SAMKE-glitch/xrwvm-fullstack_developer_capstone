@@ -12,7 +12,7 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 from .models import CarMake, CarModel
 from .populate import initiate
-from .restapis import get_request, analyze_review_sentiments, post_review
+from .restapis import get_request, analyze_review_sentiments
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -25,7 +25,7 @@ def get_cars(request):
     if count == 0:
         initiate()
     car_models = CarModel.objects.select_related('car_make')
-    cars = [{"CarModel": car_model.name, "CarMake": car_model.car_make.name} 
+    cars = [{"CarModel": car_model.name, "CarMake": car_model.car_make.name}
             for car_model in car_models]
     return JsonResponse({"CarModels": cars})
 
@@ -69,7 +69,8 @@ def registration(request):
         logger.debug(f"{username} is a new user")
 
     if not username_exist:
-        user = User.objects.create_user(username=username, first_name=first_name, 
+        user = User.objects.create_user(username=username, 
+                                        first_name=first_name,
                                         last_name=last_name,
                                         password=password, email=email)
         login(request, user)
