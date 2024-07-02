@@ -1,2 +1,5 @@
 # **Fullstack Application Development Capstone Project**
-This is a test link for [Google]: http://www.reddit.com
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
