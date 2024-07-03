@@ -56,7 +56,7 @@ Your organization has assigned you as the Lead Full-Stack Software Developer on 
 4. **Sentiment Analyzer:**
     - Deploy and integrate the sentiment analyzer as a backend service.
 
-![Architecture Diagram](/xrwvm-fullstack_developer_capstone/images/architectDesign.png)
+![Architecture Diagram](/images/architectDesign.png)
 
 ## Technologies
 
