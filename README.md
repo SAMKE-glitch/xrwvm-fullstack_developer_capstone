@@ -68,7 +68,7 @@ Your organization has assigned you as the Lead Full-Stack Software Developer on 
     - Deploy and integrate the sentiment analyzer as a backend service.
 
 ![Architecture Diagram](/images/architectDesign.png)
-### Detailed Services
+### **Detailed Services**
 
 The user interacts with the "Dealerships Website", a Django website, through a web browser.
 
