@@ -29,4 +29,11 @@ In addition to the above, authorized users should be able to write a review for 
     }
     ```
 
+On submission, the user should be taken back to the dealership detail page with the submitted review featured at the top of the reviews list, sorted on time.
+
+### Use cases for admin users:
+- Log in to the admin site with a predefined username and password.
+- Add new make, model, and other attributes.
+
+Your organization has assigned you as the Lead Full-Stack Software Developer on this project. Your job is to develop this portal as part of your Capstone project by following best practices for Full-Stack software development.
 
