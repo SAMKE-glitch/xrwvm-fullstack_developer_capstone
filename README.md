@@ -134,3 +134,14 @@ pip install virtualenv
 virtualenv djangoenv
 source djangoenv/bin/activate
 ```
+
+### 3. Install necessary Python packages in your virtual environment
+```bash
+python3 -m pip install -U -r requirements.txt
+```
+
+### 4. Perform migrations to create necessary tables
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
