@@ -86,3 +86,10 @@ Your organization has assigned you as the Lead Full-Stack Software Developer on 
     - Python (for the Django application)
     - JavaScript (for the Node.js server and React frontend)
 
+## Installation
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/SAMKE-glitch/xrwvm-fullstack_developer_capstone
+cd xrwvm-fullstack_developer_capstone
+```
