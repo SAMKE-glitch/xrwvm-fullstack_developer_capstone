@@ -37,3 +37,43 @@ On submission, the user should be taken back to the dealership detail page with 
 
 Your organization has assigned you as the Lead Full-Stack Software Developer on this project. Your job is to develop this portal as part of your Capstone project by following best practices for Full-Stack software development.
 
+## Architectural Overview
+
+1. **Django Application:**
+    - Add user management using the Django user authentication system.
+    - Create Django models and views to manage car model and car make.
+    - Create Django proxy services and views to integrate dealers and reviews together.
+
+2. **React Frontend:**
+    - Implement user management using the Django user authentication system.
+    - Create a React frontend for the application.
+
+3. **Backend Services:**
+    - Create a Node.js server to manage dealers and reviews using MongoDB.
+    - Dockerize the Node.js server.
+    - Deploy the sentiment analyzer on Code Engine.
+
+4. **Sentiment Analyzer:**
+    - Deploy and integrate the sentiment analyzer as a backend service.
+
+![Architecture Diagram](/xrwvm-fullstack_developer_capstone/images/architectDesign.png)
+
+## Technologies
+
+- **Frontend:**
+    - React
+    - Bootstrap (for form and UI components)
+
+- **Backend:**
+    - Django
+    - Node.js
+    - MongoDB
+
+- **Services:**
+    - Docker (for containerization)
+    - Code Engine (for deploying the sentiment analyzer)
+
+- **Other:**
+    - Python (for the Django application)
+    - JavaScript (for the Node.js server and React frontend)
+
