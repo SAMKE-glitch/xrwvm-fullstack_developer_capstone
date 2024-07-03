@@ -66,7 +66,39 @@ Your organization has assigned you as the Lead Full-Stack Software Developer on 
     - Deploy and integrate the sentiment analyzer as a backend service.
 
 ![Architecture Diagram](/images/architectDesign.png)
+### Detailed Services
 
+The user interacts with the "Dealerships Website", a Django website, through a web browser.
+
+#### Django Application
+The Django application provides the following microservices for the end user:
+
+- `get_cars/` - To get the list of cars.
+- `get_dealers/` - To get the list of dealers.
+- `get_dealers/:state` - To get dealers by state.
+- `dealer/:id` - To get dealer by id.
+- `review/dealer/:id` - To get reviews specific to a dealer.
+- `add_review/` - To post review about a dealer.
+
+The Django application uses an SQLite database to store the Car Make and the Car Model data.
+
+#### Dealerships and Reviews Service
+The "Dealerships and Reviews Service" is an Express Mongo service running in a Docker container. It provides the following services:
+
+- `/fetchDealers` - To fetch the dealers.
+- `/fetchDealer/:id` - To fetch the dealer by id.
+- `/fetchReviews` - To fetch all the reviews.
+- `/fetchReview/dealer/:id` - To fetch reviews for a dealer by id.
+- `/insertReview` - To insert a review.
+
+"Dealerships Website" interacts with the "Dealership and Reviews Service" through the "Django Proxy Service" contained within the Django Application.
+
+#### Sentiment Analyzer Service
+The "Sentiment Analyzer Service" is deployed on IBM Cloud Code Engine and provides the following service:
+
+- `/analyze/:text` - To analyze the sentiment of the text passed. It returns positive, negative, or neutral.
+
+The "Dealerships Website" consumes the "Sentiment Analyzer Service" to analyze the sentiments of the reviews through the Django Proxy contained within the Django application.
 ## **Technologies**
 
 - **Frontend:**
