@@ -128,8 +128,8 @@ git clone https://github.com/SAMKE-glitch/xrwvm-fullstack_developer_capstone
 cd xrwvm-fullstack_developer_capstone/server
 ```
 
-## 2. Set up virtual environment for your Django application to run
-```
+### 2. Set up virtual environment for your Django application to run
+```bash
 pip install virtualenv
 virtualenv djangoenv
 source djangoenv/bin/activate
