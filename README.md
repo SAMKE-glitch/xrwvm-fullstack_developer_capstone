@@ -125,5 +125,12 @@ The "Dealerships Website" consumes the "Sentiment Analyzer Service" to analyze t
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/SAMKE-glitch/xrwvm-fullstack_developer_capstone
-cd xrwvm-fullstack_developer_capstone
+cd xrwvm-fullstack_developer_capstone/server
+```
+
+## 2. Set up virtual environment for your Django application to run
+```
+pip install virtualenv
+virtualenv djangoenv
+source djangoenv/bin/activate
 ```
