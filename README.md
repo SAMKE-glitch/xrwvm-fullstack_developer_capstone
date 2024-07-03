@@ -145,3 +145,8 @@ python3 -m pip install -U -r requirements.txt
 python3 manage.py makemigrations
 python3 manage.py migrate
 ```
+
+### 5. Start the local development server
+```bash
+python3 manage.py runserver
+```
