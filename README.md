@@ -186,3 +186,32 @@ npm run build
 
 ### 2. Once the code engine set up is complete, you can see that it is active. Click on Code Engine CLI to begin the pre-configured CLI in the terminal below.
 ![Homepage](/images/activeEngine.png)
+
+
+## Deploy sentiment analysis on Code Engine as a microservice
+
+### 1. In the code engine CLI, change to server/djangoapp/microservices directory.
+```bash
+cd xrwvm-fullstack_developer_capstone/server/djangoapp/microservices
+```
+
+### 2. Run the following command to docker build the sentiment analyzer app
+```bash
+docker build . -t us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer
+```
+
+### 3. Push the docker image by running the following command.
+```bash
+docker push us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer
+```
+
+### 4. Deploy the senti_analyzer application on code engine.
+```bash
+ibmcloud ce application create --name sentianalyzer --image us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer --registry-secret icr-secret --port 5000
+```
+
+### 5. Open djangoapp/.env and replace your code engine deployment url with the deployment URL you obtained above.
+### It is essintial to include // at the end of the URL. Please ensurethat it is copied
+```bash
+sentiment_analyzer_url=your code engine deployment url
+```
