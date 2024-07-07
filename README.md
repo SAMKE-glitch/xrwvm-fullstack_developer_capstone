@@ -169,3 +169,12 @@ docker build . -t nodeapp
 ```bash
 docker-compose up
 ```
+
+## Run Client-side (REACT for Dynamic pages) 
+
+### Open a new terminal and build your client by running the following commands:
+```bash
+cd /xrwvm-fullstack_developer_capstone/server/frontend
+npm install
+npm run build
+```
