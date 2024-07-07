@@ -153,7 +153,7 @@ python3 manage.py runserver
 
 ![Homepage](/images/landingPAGE.png)
 
-## Node.js Mongo DB Dockerized Server
+## **Node.js Mongo DB Dockerized Server**
 
 ### 1. Open a new terminal, Change to the directory with the data files.
 ```bash
