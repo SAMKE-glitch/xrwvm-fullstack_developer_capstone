@@ -143,7 +143,7 @@ python3 -m pip install -U -r requirements.txt
 ### 4. Perform migrations to create necessary tables
 ```bash
 python3 manage.py makemigrations
-python3 manage.py migrate
+python3 manage.py migrate --run-syncdb
 ```
 
 ### 5. Start the local development server
