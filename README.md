@@ -211,7 +211,10 @@ ibmcloud ce application create --name sentianalyzer --image us.icr.io/${SN_ICR_N
 ```
 
 ### 5. Open djangoapp/.env and replace your code engine deployment url with the deployment URL you obtained above.
-### It is essintial to include // at the end of the URL. Please ensurethat it is copied
+### It is essintial to include / at the end of the URL. Please ensurethat it is copied
 ```bash
 sentiment_analyzer_url=your code engine deployment url
 ```
+
+### Sentiment analyzer on a review from client
+![Homepage](/images/sentimentAnalysis.png)
