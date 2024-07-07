@@ -178,3 +178,8 @@ cd /xrwvm-fullstack_developer_capstone/server/frontend
 npm install
 npm run build
 ```
+
+## Create Django Proxy Services of Backend APIs
+
+### Start code engine by creating a project.
+![Homepage](/images/codeEngine.png)
