@@ -181,5 +181,8 @@ npm run build
 
 ## Create Django Proxy Services of Backend APIs
 
-### Start code engine by creating a project.
+### 1. Start code engine by creating a project.
 ![Homepage](/images/codeEngine.png)
+
+### 2. Once the code engine set up is complete, you can see that it is active. Click on Code Engine CLI to begin the pre-configured CLI in the terminal below.
+![Homepage](/images/activeEngine.png)
