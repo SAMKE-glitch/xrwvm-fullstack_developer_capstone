@@ -152,3 +152,20 @@ python3 manage.py runserver
 ```
 
 ![Homepage](/images/landingPAGE.png)
+
+## Node.js Mongo DB Dockerized Server
+
+### 1. Open a new terminal, Change to the directory with the data files.
+```bash
+cd /xrwvm-fullstack_developer_capstone/server/database
+```
+
+### 2. Run the following command to build the Docker app.
+```bash
+docker build . -t nodeapp
+```
+
+### 3. The docker-compose.yml has been created to run two containers, one for Mongo and the other for the Node app. Run the following command to run the server:
+```bash
+docker-compose up
+```
